@@ -4,7 +4,7 @@ This PowerShell script disables USB storage device access on Windows machines to
 
 ---
 
-## 🔧 What It Does
+## What It Does
 
 - Modifies the Windows registry key that controls USBSTOR (USB Storage Driver)
 - Sets the `Start` value to `4`, which disables the driver
@@ -12,7 +12,7 @@ This PowerShell script disables USB storage device access on Windows machines to
 
 ---
 
-## 🛠️ Usage
+## Usage
 
 1. Open PowerShell **as Administrator**
 2. Run the script:
@@ -25,7 +25,7 @@ This PowerShell script disables USB storage device access on Windows machines to
 
 ---
 
-## 🔁 To Re-Enable USB Storage
+## To Re-Enable USB Storage
 
 If needed, you can set the registry key value back to `3`:
 
@@ -35,7 +35,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\USBSTOR" -Name "
 
 ---
 
-## ⚠️ Notes
+## Notes
 
 - **Requires administrative privileges**
 - Script does **not** affect USB keyboards, mice, or other non-storage devices
@@ -43,12 +43,12 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\USBSTOR" -Name "
 
 ---
 
-## 📂 File
+## File
 
 - `disable_usb.ps1`: PowerShell script to disable USB storage
 
 ---
 
-## 🧠 Why It Matters
+## Why It Matters
 
 Disabling USB storage can be a critical part of a broader endpoint hardening strategy, especially in secure or classified environments. It’s a quick win to reduce insider risk and data leakage vectors.
